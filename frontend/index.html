@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>PYQ Helper</title>
+  <link rel="stylesheet" href="./css/style.css">
+</head>
+<body>
+
+<header class="header">
+  <h1>PYQ Helper</h1>
+  <p>Access Previous Year Question Papers Easily</p>
+</header>
+
+<section class="filters">
+  <input id="subjectFilter" placeholder="Subject">
+  <input id="yearFilter" placeholder="Year">
+  <input id="semesterFilter" placeholder="Semester">
+  <select id="typeFilter">
+    <option value="">All Types</option>
+    <option>Previous Year Question</option>
+    <option>Sample Paper</option>
+  </select>
+  <button onclick="applyFilters()">Search</button>
+</section>
+
+<section class="table-container">
+  <table>
+    <thead>
+      <tr>
+        <th>Subject</th>
+        <th>Year</th>
+        <th>Semester</th>
+        <th>Type</th>
+        <th>Action</th>
+      </tr>
+    </thead>
+    <tbody id="paperList"></tbody>
+  </table>
+  <p id="emptyMsg" class="empty-msg">No papers available</p>
+</section>
+
+<footer>
+  <p>BY DIPANSHU POONIA</p> 
+  Branch: CSE | Year: 2nd Year | College: SRM INSTITUTE OF SCIENCE AND TECHNOLOGY
+</footer>
+
+<script src="./js/main.js"></script>
+</body>
+</html>

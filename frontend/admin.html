@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>PYQ Admin Panel</title>
+  <link rel="stylesheet" href="./css/style.css">
+</head>
+<body>
+
+<header class="header admin">
+  <h2>PYQ Admin Panel</h2>
+  <button id="logoutBtn">Logout</button>
+</header>
+
+<section class="card">
+  <h3>Upload Question Paper</h3>
+
+  <form id="uploadForm" enctype="multipart/form-data">
+    <input name="subject" placeholder="Subject" required>
+    <input name="year" type="number" placeholder="Year" required>
+    <input name="semester" type="number" placeholder="Semester" required>
+
+    <select name="type">
+      <option value="Previous Year Question">Previous Year Question</option>
+      <option value="Sample Paper">Sample Paper</option>
+    </select>
+
+    <input name="file" type="file" accept=".pdf" required>
+
+    <button type="submit">Upload</button>
+  </form>
+</section>
+
+<section class="table-container">
+  <table>
+    <thead>
+      <tr>
+        <th>Subject</th>
+        <th>Year</th>
+        <th>Semester</th>
+        <th>Type</th>
+        <th>Action</th>
+      </tr>
+    </thead>
+
+    <!-- ✅ THIS ID MUST MATCH admin.js -->
+    <tbody id="papersTable"></tbody>
+  </table>
+</section>
+
+<script src="./js/admin.js"></script>
+</body>
+</html>
